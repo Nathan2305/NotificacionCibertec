@@ -16,5 +16,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/presence_video_online" />
+        android:src="@drawable/gps_icon"/>
 </android.support.constraint.ConstraintLayout>

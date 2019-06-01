@@ -4,6 +4,7 @@ import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.IntentFilter;
 import android.os.Build;
+import android.provider.Settings;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -20,7 +21,8 @@ public class MainActivity extends AppCompatActivity {
         MyBroadcastReceiver myBroadcastReceiver = new MyBroadcastReceiver();
         IntentFilter intentFilter = new IntentFilter();
        // intentFilter.addAction("pe.cibertec.broadcast.ACTION");
-        intentFilter.addAction("android.intent.action.AIRPLANE_MODE");
+        intentFilter.addAction(Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+       //intentFilter.addAction("android.intent.action.AIRPLANE_MODE");
         this.registerReceiver(myBroadcastReceiver, intentFilter);
     }
     private void createNotificationChannel() {

@@ -18,8 +18,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent();
-                intent.setAction("pe.cibertec.broadcast.ACTION");
-                intent.setAction("android.intent.AIRPLANE_MODE");
+               /* intent.setAction("pe.cibertec.broadcast.ACTION");
+                intent.setAction("android.intent.AIRPLANE_MODE");*/
                 sendBroadcast(intent);
             }
         });

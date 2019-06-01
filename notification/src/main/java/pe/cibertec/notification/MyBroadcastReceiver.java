@@ -7,6 +7,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
+import android.provider.Settings;
 import android.support.v4.app.NotificationCompat;
 import android.support.v4.app.NotificationManagerCompat;
 import android.widget.Toast;
@@ -30,7 +31,9 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
             managerCompat.notify(0,notification.build());
 
         }*/
-        if (action.equalsIgnoreCase("android.intent.action.AIRPLANE_MODE")){
+
+        if (action.equalsIgnoreCase( Settings.ACTION_LOCATION_SOURCE_SETTINGS)){
+        //if (action.equalsIgnoreCase("android.intent.action.AIRPLANE_MODE")){
             Toast.makeText(context, "Acción ocurrió", Toast.LENGTH_SHORT).show();
             //CREAR NOTIFICACION
             Intent newIntent=new Intent(context,NotificationActivity.class);
