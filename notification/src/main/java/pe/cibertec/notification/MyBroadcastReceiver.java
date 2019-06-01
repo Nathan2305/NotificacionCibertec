@@ -40,8 +40,8 @@ public class MyBroadcastReceiver extends BroadcastReceiver {
             PendingIntent pendingIntent=PendingIntent.getActivity(context,1,newIntent,0);
             NotificationCompat.Builder notification=new NotificationCompat.Builder(context,"Canal")
                     .setSmallIcon(R.mipmap.ic_launcher)
-                    .setContentTitle("Notificacion Modo avión")
-                    .setContentText("Modo avión")
+                    .setContentTitle("Notificacion GPS")
+                    .setContentText("GPS")
                     .setPriority(NotificationCompat.PRIORITY_DEFAULT)
                     .setContentIntent(pendingIntent)
                     .setAutoCancel(true);
